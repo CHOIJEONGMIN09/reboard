@@ -3,7 +3,7 @@ import { Link, Outlet, useNavigate } from 'react-router';
 import { BiPyramid } from "react-icons/bi";
 import { useQueryClient } from '@tanstack/react-query';
 import { useMe } from '../hooks/useMe';
-import { clearAuth } from '../api/AuthApi';
+import { clearAuth } from '../api/authApi';
 
 function AppLayout() {
   const queryClient = useQueryClient();
@@ -15,7 +15,7 @@ function AppLayout() {
     clearAuth();
     queryClient.setQueryData(["me"], null); //즉시 UI반영
     navigate("/posts");
-}
+  }
 
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: '#f5f7fb' }}>
