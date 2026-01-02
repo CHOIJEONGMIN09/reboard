@@ -5,6 +5,8 @@ import { useQueryClient } from '@tanstack/react-query';
 import { useMe } from '../hooks/useMe';
 import { clearAuth } from '../api/authApi';
 
+
+
 function AppLayout() {
   const queryClient = useQueryClient();
   const { data: me, isLoading: meIsLoading } = useMe(); // 쿼리인데, const{} 이 부분이 useMe.js에는 없음
