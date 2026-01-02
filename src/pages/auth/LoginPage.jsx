@@ -1,7 +1,7 @@
 import { Container, Stack, Typography, Paper, Box, Button, TextField } from "@mui/material";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router";
-import { login, setAuth } from '../api/authApi';
+import { login, setAuth } from '../../api/authApi';
 
 function LoginPage() {
     const navigate = useNavigate();

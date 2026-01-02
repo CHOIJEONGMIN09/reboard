@@ -1,4 +1,3 @@
-//authApi.js
 import { api } from './api'
 
 // 인증 관리 api
