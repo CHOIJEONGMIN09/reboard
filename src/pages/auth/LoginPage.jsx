@@ -1,7 +1,7 @@
 import { Container, Stack, Typography, Paper, Box, Button, TextField } from "@mui/material";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router";
-import { login, setAuth } from "../../api/AuthApi";
+import { login, setAuth } from '../api/authApi';
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -46,13 +46,13 @@ function LoginPage() {
 
                 <Box component="form" sx={{ mt: 2, mb: 2 }} onSubmit={handleSubmit}>
                     <Stack spacing={2}>
-                        <TextField label='이메일' name='email' type='email' placeholder='test@test.com' size='small' required 
+                        <TextField label='이메일' name='email' type='email' placeholder='test@test.com' size='small' required
                         />
                         <TextField label='비밀번호' name='password' type='password' placeholder='비밀번호' size='small' required />
 
                         {
                             loginMutation.isError && (
-                                 <Typography variant='body2' color='error'>로그인에 실패했습니다.</Typography>
+                                <Typography variant='body2' color='error'>로그인에 실패했습니다.</Typography>
                             )
                         }
 
@@ -60,7 +60,7 @@ function LoginPage() {
                             variant='contained'
                             sx={{ mt: 1, py: 1.2, borderRadius: 2, textTransform: 'none', "&:hover": { backgroundColor: '#999' } }}
                             disabled={loginMutation.isPending}
-                        >{ loginMutation.isPending ? "로그인 중..." : "로그인"}</Button>
+                        >{loginMutation.isPending ? "로그인 중..." : "로그인"}</Button>
                     </Stack>
                 </Box>
             </Paper>

@@ -2,7 +2,8 @@ import { Box, Button, Container, Paper, Stack, TextField, Typography } from "@mu
 import { useMutation } from "@tanstack/react-query";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { register, setAuth } from "../../api/AuthApi";
+import { register, setAuth } from '../api/authApi';
+
 
 //회원가입
 function RegisterPage() {
